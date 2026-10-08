@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.sp
 fun ActivityPertama(modifier: Modifier) {
     Column(
         modifier = modifier.padding(top = 100.dp)
-            .fillMaxSize()
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -51,16 +51,30 @@ fun ActivityPertama(modifier: Modifier) {
             Spacer(modifier = Modifier.width(30.dp))
             Column() {
                 Text(
-                    stringResource(id = R.string.nama),
-                    fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    stringResource(id = R.string.alamat),
+                    stringResource(R.string.nama),
                     fontSize = 30.sp,
                     fontFamily = FontFamily.Cursive,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 15.dp)
+                )
+                Text(
+                    stringResource(R.string.alamat),
+                    fontSize = 20.sp,
+                    color = Color.Yellow,
+                    modifier = Modifier.padding(top = 10.dp)
                 )
             }
         }
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Text(
+            stringResource(R.string.copy),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 50.dp)
+        )
     }
 }
