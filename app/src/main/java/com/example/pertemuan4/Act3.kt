@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.height
 
 
 @Composable
