@@ -1,6 +1,8 @@
 package com.example.pertemuan4
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -38,7 +40,27 @@ fun ActivityPertama(modifier: Modifier) {
                 containerColor = Color.DarkGray
             )
         ) {
-
+            Row() {
+                val gambar = painterResource(id = R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier.size(100.dp).padding( all = 5.dp)
+                )
+            }
+            Spacer(modifier = Modifier.width(30.dp))
+            Column() {
+                Text(
+                    stringResource(id = R.string.nama),
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    stringResource(id = R.string.alamat),
+                    fontSize = 30.sp,
+                    fontFamily = FontFamily.Cursive,
+                )
+            }
         }
     }
 }
